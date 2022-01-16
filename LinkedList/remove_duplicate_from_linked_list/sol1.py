@@ -1,4 +1,7 @@
 # This is an input class. Do not edit.
+from os import link
+
+
 class LinkedList:
     def __init__(self, value):
         self.value = value
@@ -6,5 +9,12 @@ class LinkedList:
 
 
 def removeDuplicatesFromLinkedList(linkedList):
-    # Write your code here.
-    return None
+    currentNode = linkedList
+    while currentNode is not None:
+        nextNode = currentNode.next
+        while nextNode is not None and currentNode.value == nextNode.value:
+            nextNode = nextNode.next
+        currentNode.next = nextNode
+        currentNode = nextNode
+
+    return linkedList
