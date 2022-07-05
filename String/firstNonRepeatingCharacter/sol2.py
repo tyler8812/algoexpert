@@ -1,3 +1,6 @@
+# O(n) time | O(1) space
+# The constant space is because the input string only has lowercase
+# our hash table will never have more than 26 characters
 def firstNonRepeatingCharacter(string):
     characters = {}
     for char in string:
