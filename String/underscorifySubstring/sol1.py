@@ -1,3 +1,6 @@
+# O(n+m) time | O(n) space
+# n : length of the main string, m: length of the substring
+# string.find() cost O(n + m) (fastest)
 def underscorifySubstring(string, substring):
     locations = collapse(get_locations(string=string, substring=substring))
     return under_scorify(string, locations)
